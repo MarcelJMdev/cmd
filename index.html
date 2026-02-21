@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="description" content="CMD Command Reference - Windows Command Prompt Befehle">
+<meta name="keywords" content="cmd, command prompt, windows, befehle, dos, commands">
+<meta name="author" content="H4x0r zaa_ay 2001">
+<title>::: CMD COMMANDS MEGALIST ::: by zaa_ay :::&nbsp;</title>
+<style type="text/css">
+<!--
+body {
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='2' height='2' fill='%23001100'/%3E%3Crect x='2' y='2' width='2' height='2' fill='%23001100'/%3E%3C/svg%3E");
+  color: #00ff00;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #00ff00;
+  text-decoration: underline;
+}
+a:hover {
+  color: #ffff00;
+  background-color: #003300;
+}
+a:visited {
+  color: #009900;
+}
+
+h1 {
+  color: #00ff00;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 22px;
+  text-align: center;
+  border-bottom: 2px solid #00ff00;
+  padding-bottom: 5px;
+  text-shadow: 0 0 8px #00ff00;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #ffff00;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  border-left: 4px solid #00ff00;
+  padding-left: 8px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #00ffff;
+  font-size: 13px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #003300;
+  padding: 4px 8px;
+  vertical-align: top;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+}
+
+.cmd {
+  color: #00ffff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.desc {
+  color: #00cc00;
+}
+
+.example {
+  color: #ffaa00;
+  font-size: 11px;
+}
+
+.trhead {
+  background-color: #003300;
+}
+
+.trhead td {
+  color: #00ff00;
+  font-weight: bold;
+  font-size: 12px;
+  border: 1px solid #00ff00;
+}
+
+tr:hover {
+  background-color: #001a00;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 20px 40px 20px;
+  border-left: 1px solid #003300;
+  border-right: 1px solid #003300;
+  min-height: 100vh;
+}
+
+.header-box {
+  border: 2px solid #00ff00;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  text-align: center;
+  background-color: #000a00;
+  box-shadow: 0 0 15px #00ff00 inset, 0 0 15px #00ff00;
+}
+
+.blink {
+  animation: blink-animation 1s step-end infinite;
+}
+@keyframes blink-animation {
+  50% { opacity: 0; }
+}
+
+.marquee-wrap {
+  border: 1px solid #006600;
+  padding: 3px;
+  background: #000800;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-inner {
+  display: inline-block;
+  animation: marquee 18s linear infinite;
+  color: #ffff00;
+  font-size: 12px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
+
+.separator {
+  color: #006600;
+  font-size: 11px;
+  text-align: center;
+  margin: 8px 0;
+  letter-spacing: 2px;
+}
+
+.note {
+  color: #888800;
+  font-size: 11px;
+  border: 1px dashed #444400;
+  padding: 5px 10px;
+  margin: 8px 0;
+  background: #010800;
+}
+
+.counter {
+  text-align: center;
+  border: 1px solid #005500;
+  padding: 5px;
+  font-size: 11px;
+  color: #006600;
+  margin: 10px 0;
+}
+
+.section-num {
+  color: #ff6600;
+  margin-right: 6px;
+}
+
+.footer {
+  border-top: 2px solid #003300;
+  margin-top: 30px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 11px;
+  color: #006600;
+}
+
+pre {
+  color: #00cc00;
+  font-size: 11px;
+  background: #000800;
+  border: 1px solid #003300;
+  padding: 8px;
+  overflow-x: auto;
+}
+
+.topnav {
+  background: #001500;
+  border: 1px solid #00ff00;
+  padding: 4px 10px;
+  margin-bottom: 15px;
+  font-size: 11px;
+}
+
+.topnav a {
+  margin-right: 12px;
+  font-size: 11px;
+}
+
+.visited-counter {
+  float: right;
+  color: #555500;
+  font-size: 10px;
+}
+
+#cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: #00ff00;
+  margin-left: 2px;
+  animation: blink-animation 0.8s step-end infinite;
+  vertical-align: middle;
+}
+
+.ascii-art {
+  color: #00aa00;
+  font-size: 10px;
+  line-height: 1.1;
+  text-align: center;
+  margin: 5px 0;
+}
+-->
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <span class="marquee-inner">
+    *** CMD COMMAND MEGALIST v2.1 *** ALLE WICHTIGEN WINDOWS COMMANDS *** 50+ BEFEHLE *** BOOKMARK DIESE SEITE *** GRUSS AN ALLE HACKER UND SYSADMINS *** ICQ: 123456789 *** LAST UPDATE: 13.03.2001 ***
+  </span>
+</div>
+
+<br>
+
+<div class="header-box">
+<div class="ascii-art">
+<pre>
+ ██████╗███╗   ███╗██████╗      ██████╗ ██╗   ██╗██╗██████╗ ███████╗
+██╔════╝████╗ ████║██╔══██╗    ██╔════╝ ██║   ██║██║██╔══██╗██╔════╝
+██║     ██╔████╔██║██║  ██║    ██║  ███╗██║   ██║██║██║  ██║█████╗  
+██║     ██║╚██╔╝██║██║  ██║    ██║   ██║██║   ██║██║██║  ██║██╔══╝  
+╚██████╗██║ ╚═╝ ██║██████╔╝    ╚██████╔╝╚██████╔╝██║██████╔╝███████╗
+ ╚═════╝╚═╝     ╚═╝╚═════╝      ╚═════╝  ╚═════╝ ╚═╝╚═════╝╚══════╝
+</pre>
+</div>
+<h1>::: ULTIMATE CMD COMMAND REFERENCE :::</h1>
+<span style="color:#888800; font-size:11px;">Windows 9x / ME / 2000 / XP &nbsp;|&nbsp; v2.1 Final &nbsp;|&nbsp; by zaa_ay</span><br><br>
+<span style="color:#00ff00; font-size:13px;">C:\WINDOWS&gt; <span id="cursor"></span></span>
+</div>
+
+<!-- TOP NAV -->
+<div class="topnav">
+  <a href="#navigation">Navigation</a>
+  <a href="#netzwerk">Netzwerk</a>
+  <a href="#system">System</a>
+  <a href="#dateien">Dateien</a>
+  <a href="#tricks">Tricks</a>
+  <span class="visited-counter">Besucher: <span style="color:#ffff00">049.312</span></span>
+</div>
+
+<div class="note">
+  <b style="color:#ffff00">&#9888; HINWEIS:</b> Diese Seite ist f&uuml;r Bildungszwecke. Starte immer CMD als Administrator f&uuml;r volle Berechtigungen. Alle Befehle auf eigene Gefahr! Getestet unter Win 98/ME/2000/XP.
+</div>
+
+<div class="counter">
+  [ Seite l&auml;dt seit: <span id="timer" style="color:#ffff00">0</span>s ] &nbsp;|&nbsp; [ Befehle insgesamt: <b style="color:#ffff00">55</b> ] &nbsp;|&nbsp; [ Status: <span style="color:#00ff00">ONLINE</span> <span class="blink">&#9646;</span> ]
+</div>
+
+<!-- ===== SECTION 1: NAVIGATION ===== -->
+<a name="navigation"></a>
+<h2><span class="section-num">[1]</span> Navigation &amp; Verzeichnisse</h2>
+
+<table cellspacing="0" cellpadding="0">
+<tr class="trhead">
+  <td width="22%">Befehl</td>
+  <td width="38%">Beschreibung</td>
+  <td width="40%">Beispiel / Syntax</td>
+</tr>
+<tr>
+  <td class="cmd">cd</td>
+  <td class="desc">Verzeichnis wechseln (Change Directory)</td>
+  <td class="example">cd C:\Windows\System32<br>cd .. &nbsp;&nbsp;<i>(ein Ordner hoch)</i><br>cd \ &nbsp;&nbsp;<i>(Root-Verzeichnis)</i></td>
+</tr>
+<tr>
+  <td class="cmd">dir</td>
+  <td class="desc">Ordnerinhalt auflisten. Mit Flags: <b>/a</b> zeigt versteckte Dateien, <b>/s</b> rekursiv, <b>/w</b> breit</td>
+  <td class="example">dir /a /b<br>dir *.exe /s<br>dir /od &nbsp;<i>(nach Datum sortiert)</i></td>
+</tr>
+<tr>
+  <td class="cmd">md / mkdir</td>
+  <td class="desc">Neuen Ordner erstellen</td>
+  <td class="example">mkdir C:\MeinOrdner<br>md "Ordner mit Leerzeichen"</td>
+</tr>
+<tr>
+  <td class="cmd">rd / rmdir</td>
+  <td class="desc">Ordner l&ouml;schen. <b>/s</b> l&ouml;scht Inhalt mit, <b>/q</b> ohne R&uuml;ckfrage</td>
+  <td class="example">rd /s /q C:\AlterOrdner</td>
+</tr>
+<tr>
+  <td class="cmd">tree</td>
+  <td class="desc">Ordnerstruktur als Baum anzeigen</td>
+  <td class="example">tree C:\ /f &gt; struktur.txt</td>
+</tr>
+<tr>
+  <td class="cmd">pushd / popd</td>
+  <td class="desc">Verzeichnis auf Stack legen / zur&uuml;ckkehren. Super n&uuml;tzlich in Scripts!</td>
+  <td class="example">pushd C:\Temp<br>popd</td>
+</tr>
+<tr>
+  <td class="cmd">D:</td>
+  <td class="desc">Laufwerk wechseln (einfach Laufwerksbuchstabe + Doppelpunkt)</td>
+  <td class="example">D:<br>E:</td>
+</tr>
+</table>
+
+<div class="separator">--- // --- // --- // ---</div>
+
+<!-- ===== SECTION 2: DATEIEN ===== -->
+<a name="dateien"></a>
+<h2><span class="section-num">[2]</span> Datei-Operationen</h2>
+
+<table cellspacing="0" cellpadding="0">
+<tr class="trhead">
+  <td width="22%">Befehl</td>
+  <td width="38%">Beschreibung</td>
+  <td width="40%">Beispiel / Syntax</td>
+</tr>
+<tr>
+  <td class="cmd">copy</td>
+  <td class="desc">Dateien kopieren. Mit <b>/y</b> ohne Best&auml;tigung &uuml;berschreiben</td>
+  <td class="example">copy datei.txt C:\Backup\<br>copy *.log D:\Logs\ /y</td>
+</tr>
+<tr>
+  <td class="cmd">xcopy</td>
+  <td class="desc">Erweitertes Kopieren mit Unterordnern. <b>/e</b>=leere Ordner, <b>/h</b>=versteckte Dateien, <b>/i</b>=Ziel ist Ordner</td>
+  <td class="example">xcopy C:\Quelle D:\Ziel /e /h /i /y</td>
+</tr>
+<tr>
+  <td class="cmd">robocopy</td>
+  <td class="desc">Robust Copy - DER Profi-Kopierer! Setzt Kopieren fort, Spiegel-Modus m&ouml;glich (XP+)</td>
+  <td class="example">robocopy C:\Quelle D:\Ziel /mir /z<br>robocopy C:\Quelle D:\Ziel *.txt /e</td>
+</tr>
+<tr>
+  <td class="cmd">move</td>
+  <td class="desc">Datei oder Ordner verschieben / umbenennen</td>
+  <td class="example">move alt.txt C:\Backup\neu.txt<br>move C:\Temp\*.log D:\</td>
+</tr>
+<tr>
+  <td class="cmd">del / erase</td>
+  <td class="desc">Dateien l&ouml;schen. <b>/f</b>=erzwingen, <b>/s</b>=Unterordner, <b>/q</b>=quiet</td>
+  <td class="example">del /f /s /q C:\Temp\*.*<br>del *.tmp /q</td>
+</tr>
+<tr>
+  <td class="cmd">ren / rename</td>
+  <td class="desc">Dateien umbenennen. Wildcards m&ouml;glich!</td>
+  <td class="example">ren alt.txt neu.txt<br>ren *.htm *.html</td>
+</tr>
+<tr>
+  <td class="cmd">type</td>
+  <td class="desc">Textdatei direkt in CMD anzeigen</td>
+  <td class="example">type C:\Windows\system.ini<br>type log.txt | more</td>
+</tr>
+<tr>
+  <td class="cmd">more</td>
+  <td class="desc">Seitenweise Ausgabe - LEERTASTE f&uuml;r n&auml;chste Seite</td>
+  <td class="example">dir /s | more<br>more datei.txt</td>
+</tr>
+<tr>
+  <td class="cmd">find / findstr</td>
+  <td class="desc">Text in Dateien suchen. <b>findstr</b> unterst&uuml;tzt Regex!</td>
+  <td class="example">find "ERROR" C:\Logs\app.log<br>findstr /i /s "passwort" *.txt</td>
+</tr>
+<tr>
+  <td class="cmd">attrib</td>
+  <td class="desc">Dateiattribute &auml;ndern: +/-H (hidden), +/-S (system), +/-R (readonly), +/-A (archive)</td>
+  <td class="example">attrib +h geheimnis.txt<br>attrib -h -s *.* /s /d</td>
+</tr>
+<tr>
+  <td class="cmd">fc</td>
+  <td class="desc">Zwei Dateien vergleichen (File Compare)</td>
+  <td class="example">fc datei1.txt datei2.txt<br>fc /b bild1.jpg bild2.jpg</td>
+</tr>
+<tr>
+  <td class="cmd">compact</td>
+  <td class="desc">NTFS-Komprimierung ein-/ausschalten</td>
+  <td class="example">compact /c /s:C:\Ordner<br>compact /u datei.txt</td>
+</tr>
+</table>
+
+<div class="separator">--- // --- // --- // ---</div>
+
+<!-- ===== SECTION 3: NETZWERK ===== -->
+<a name="netzwerk"></a>
+<h2><span class="section-num">[3]</span> Netzwerk-Befehle</h2>
+
+<div class="note">
+  <b style="color:#00ffff">&#128276; PRO-TIP:</b> Netzwerk-Befehle sind das Wichtigste! Lerne diese auswendig.
+</div>
+
+<table cellspacing="0" cellpadding="0">
+<tr class="trhead">
+  <td width="22%">Befehl</td>
+  <td width="38%">Beschreibung</td>
+  <td width="40%">Beispiel / Syntax</td>
+</tr>
+<tr>
+  <td class="cmd">ping</td>
+  <td class="desc">Host anpingen - Erreichbarkeit pr&uuml;fen. <b>-t</b>=dauerhaft, <b>-n X</b>=X mal, <b>-l X</b>=Paketgr&ouml;&szlig;e</td>
+  <td class="example">ping google.com<br>ping -t 192.168.1.1<br>ping -n 10 -l 1000 8.8.8.8</td>
+</tr>
+<tr>
+  <td class="cmd">ipconfig</td>
+  <td class="desc">IP-Konfiguration anzeigen. <b>/all</b>=Details mit MAC, <b>/release</b>=IP freigeben, <b>/renew</b>=neue IP, <b>/flushdns</b>=DNS-Cache leeren</td>
+  <td class="example">ipconfig /all<br>ipconfig /flushdns<br>ipconfig /release &amp;&amp; ipconfig /renew</td>
+</tr>
+<tr>
+  <td class="cmd">tracert</td>
+  <td class="desc">Netzwerkpfad zum Ziel verfolgen (Traceroute)</td>
+  <td class="example">tracert google.com<br>tracert -d 8.8.8.8</td>
+</tr>
+<tr>
+  <td class="cmd">netstat</td>
+  <td class="desc">Aktive Netzwerkverbindungen. <b>-an</b>=alle+numerisch, <b>-b</b>=Prozesse (Admin!), <b>-o</b>=PID</td>
+  <td class="example">netstat -an<br>netstat -ano | find "LISTEN"<br>netstat -b</td>
+</tr>
+<tr>
+  <td class="cmd">nslookup</td>
+  <td class="desc">DNS-Abfragen - Domain zu IP aufl&ouml;sen und zur&uuml;ck</td>
+  <td class="example">nslookup google.com<br>nslookup 8.8.8.8<br>nslookup google.com 1.1.1.1</td>
+</tr>
+<tr>
+  <td class="cmd">net</td>
+  <td class="desc">Netzwerk-Verwaltung: Benutzer, Dienste, Freigaben. Sehr m&auml;chtig!</td>
+  <td class="example">net user &nbsp;<i>(Benutzer auflisten)</i><br>net share &nbsp;<i>(Freigaben)</i><br>net use Z: \\server\share<br>net start / net stop</td>
+</tr>
+<tr>
+  <td class="cmd">arp</td>
+  <td class="desc">ARP-Tabelle anzeigen - IP zu MAC-Mapping im lokalen Netz</td>
+  <td class="example">arp -a<br>arp -d &nbsp;<i>(Tabelle l&ouml;schen)</i></td>
+</tr>
+<tr>
+  <td class="cmd">route</td>
+  <td class="desc">Routing-Tabelle anzeigen und &auml;ndern</td>
+  <td class="example">route print<br>route add 192.168.2.0 mask 255.255.255.0 192.168.1.1</td>
+</tr>
+<tr>
+  <td class="cmd">netsh</td>
+  <td class="desc">Netzwerk-Konfiguration per Script. WLAN-Profile, Firewall, IP setzen</td>
+  <td class="example">netsh wlan show profiles<br>netsh wlan show profile name="MYWLAN" key=clear<br>netsh int ip reset<br>netsh advfirewall reset</td>
+</tr>
+<tr>
+  <td class="cmd">pathping</td>
+  <td class="desc">Kombination aus ping und tracert - zeigt Paketverlust pro Hop (XP+)</td>
+  <td class="example">pathping google.com<br>pathping -n 8.8.8.8</td>
+</tr>
+<tr>
+  <td class="cmd">ftp</td>
+  <td class="desc">FTP-Client direkt in CMD</td>
+  <td class="example">ftp ftp.server.de<br>ftp -s:befehle.txt server.com</td>
+</tr>
+</table>
+
+<div class="separator">--- // --- // --- // ---</div>
+
+<!-- ===== SECTION 4: SYSTEM ===== -->
+<a name="system"></a>
+<h2><span class="section-num">[4]</span> System &amp; Prozesse</h2>
+
+<table cellspacing="0" cellpadding="0">
+<tr class="trhead">
+  <td width="22%">Befehl</td>
+  <td width="38%">Beschreibung</td>
+  <td width="40%">Beispiel / Syntax</td>
+</tr>
+<tr>
+  <td class="cmd">tasklist</td>
+  <td class="desc">Alle laufenden Prozesse anzeigen. <b>/fi</b>=Filter, <b>/svc</b>=Dienste</td>
+  <td class="example">tasklist<br>tasklist /fi "imagename eq chrome.exe"<br>tasklist /svc</td>
+</tr>
+<tr>
+  <td class="cmd">taskkill</td>
+  <td class="desc">Prozess beenden. <b>/im</b>=nach Name, <b>/pid</b>=nach PID, <b>/f</b>=erzwingen</td>
+  <td class="example">taskkill /im notepad.exe /f<br>taskkill /pid 1234 /f<br>taskkill /f /im chrome.exe</td>
+</tr>
+<tr>
+  <td class="cmd">systeminfo</td>
+  <td class="desc">Vollst&auml;ndige Systeminformationen: OS, CPU, RAM, Hotfixes</td>
+  <td class="example">systeminfo<br>systeminfo | find "RAM"<br>systeminfo /s REMOTEPC</td>
+</tr>
+<tr>
+  <td class="cmd">wmic</td>
+  <td class="desc">Windows Management Instrumentation - SEHR m&auml;chtig! Hardware-Infos, Prozesse, Dienste</td>
+  <td class="example">wmic cpu get name<br>wmic memorychip get capacity<br>wmic diskdrive get model,size<br>wmic process list brief</td>
+</tr>
+<tr>
+  <td class="cmd">sc</td>
+  <td class="desc">Windows-Dienste verwalten (Service Control)</td>
+  <td class="example">sc query<br>sc start "Spooler"<br>sc stop "wuauserv"<br>sc qc "Dienst" &nbsp;<i>(Infos)</i></td>
+</tr>
+<tr>
+  <td class="cmd">reg</td>
+  <td class="desc">Registry per CMD bearbeiten - lesen, schreiben, l&ouml;schen</td>
+  <td class="example">reg query HKLM\SOFTWARE<br>reg add HKCU\Test /v Name /t REG_SZ /d Wert<br>reg export HKCU backup.reg<br>reg import backup.reg</td>
+</tr>
+<tr>
+  <td class="cmd">sfc</td>
+  <td class="desc">System File Checker - Windows-Systemdateien reparieren!</td>
+  <td class="example">sfc /scannow<br>sfc /verifyonly</td>
+</tr>
+<tr>
+  <td class="cmd">chkdsk</td>
+  <td class="desc">Festplatte auf Fehler pr&uuml;fen und reparieren. <b>/f</b>=Fehler beheben, <b>/r</b>=Sektoren</td>
+  <td class="example">chkdsk C: /f /r<br>chkdsk D: /scan</td>
+</tr>
+<tr>
+  <td class="cmd">diskpart</td>
+  <td class="desc">Festplatten und Partitionen verwalten. Muss als Admin laufen!</td>
+  <td class="example">diskpart<br><i>(dann interaktiv:)</i><br>list disk / list volume<br>select disk 1 / clean</td>
+</tr>
+<tr>
+  <td class="cmd">shutdown</td>
+  <td class="desc">PC herunterfahren, neu starten, abmelden. <b>/t X</b>=Verz&ouml;gerung in Sek.</td>
+  <td class="example">shutdown /s /t 60<br>shutdown /r /t 0 &nbsp;<i>(sofort restart)</i><br>shutdown /a &nbsp;<i>(abbrechen)</i><br>shutdown /s /m \\REMOTEPC</td>
+</tr>
+<tr>
+  <td class="cmd">powercfg</td>
+  <td class="desc">Energieoptionen verwalten, Batterie-Report erstellen</td>
+  <td class="example">powercfg /batteryreport<br>powercfg /energy<br>powercfg /h off &nbsp;<i>(Ruhezustand aus)</i></td>
+</tr>
+<tr>
+  <td class="cmd">dxdiag</td>
+  <td class="desc">DirectX-Diagnosetool - Hardware &amp; Treiber-Infos</td>
+  <td class="example">dxdiag<br>dxdiag /t dxdiag_report.txt</td>
+</tr>
+<tr>
+  <td class="cmd">msconfig</td>
+  <td class="desc">Systemkonfiguration - Autostart, Boot-Optionen (GUI startet)</td>
+  <td class="example">msconfig</td>
+</tr>
+<tr>
+  <td class="cmd">gpupdate</td>
+  <td class="desc">Gruppenrichtlinien sofort aktualisieren</td>
+  <td class="example">gpupdate /force</td>
+</tr>
+<tr>
+  <td class="cmd">bcdedit</td>
+  <td class="desc">Boot-Konfigurationsdaten bearbeiten (Vista+, braucht Admin)</td>
+  <td class="example">bcdedit /enum all<br>bcdedit /set safeboot minimal &nbsp;<i>(Safemode)</i><br>bcdedit /deletevalue safeboot</td>
+</tr>
+</table>
+
+<div class="separator">--- // --- // --- // ---</div>
+
+<!-- ===== SECTION 5: TRICKS & SCRIPTING ===== -->
+<a name="tricks"></a>
+<h2><span class="section-num">[5]</span> Tricks, Pipes &amp; Scripting</h2>
+
+<table cellspacing="0" cellpadding="0">
+<tr class="trhead">
+  <td width="22%">Befehl / Trick</td>
+  <td width="38%">Beschreibung</td>
+  <td width="40%">Beispiel / Syntax</td>
+</tr>
+<tr>
+  <td class="cmd">echo</td>
+  <td class="desc">Text ausgeben oder Variablen anzeigen. <b>echo off</b> unterdr&uuml;ckt Befehls-Output in .bat</td>
+  <td class="example">echo Hallo Welt!<br>echo %USERNAME%<br>echo. &nbsp;<i>(leere Zeile)</i><br>@echo off &nbsp;<i>(in .bat)</i></td>
+</tr>
+<tr>
+  <td class="cmd">set</td>
+  <td class="desc">Umgebungsvariablen anzeigen und setzen. <b>/p</b>=Benutzereingabe, <b>/a</b>=Arithmetik</td>
+  <td class="example">set<br>set MYVAR=HelloWorld<br>set /p EINGABE=Dein Name: <br>set /a ERGEBNIS=5*10</td>
+</tr>
+<tr>
+  <td class="cmd">&gt; und &gt;&gt;</td>
+  <td class="desc">Output in Datei umleiten. <b>&gt;</b>=&uuml;berschreiben, <b>&gt;&gt;</b>=anh&auml;ngen. <b>2&gt;</b>=Fehler umleiten</td>
+  <td class="example">dir &gt; liste.txt<br>echo neu &gt;&gt; log.txt<br>befehl 2&gt;fehler.txt<br>befehl &gt;out.txt 2&gt;&amp;1</td>
+</tr>
+<tr>
+  <td class="cmd">| (Pipe)</td>
+  <td class="desc">Output eines Befehls als Input f&uuml;r den n&auml;chsten verwenden</td>
+  <td class="example">tasklist | find "chrome"<br>dir /s | findstr ".exe" | more<br>netstat -an | find "LISTEN"</td>
+</tr>
+<tr>
+  <td class="cmd">&amp;&amp; und ||</td>
+  <td class="desc">Befehle verketten: <b>&amp;&amp;</b>=n&auml;chster nur wenn erfolgreich, <b>||</b>=n&auml;chster nur bei Fehler</td>
+  <td class="example">cd C:\Backup &amp;&amp; dir<br>ping server || echo "Offline!"</td>
+</tr>
+<tr>
+  <td class="cmd">cls</td>
+  <td class="desc">Bildschirm leeren (Clear Screen)</td>
+  <td class="example">cls</td>
+</tr>
+<tr>
+  <td class="cmd">clip</td>
+  <td class="desc">Output in die Zwischenablage kopieren!</td>
+  <td class="example">ipconfig | clip<br>dir | clip<br>type datei.txt | clip</td>
+</tr>
+<tr>
+  <td class="cmd">for</td>
+  <td class="desc">Schleife in CMD! <b>/f</b>=Datei-Parsing, <b>/l</b>=Zahlen, <b>/d</b>=Ordner, <b>/r</b>=rekursiv</td>
+  <td class="example">for %i in (*.txt) do echo %i<br>for /l %i in (1,1,10) do echo %i<br>for /f %i in (liste.txt) do ping %i</td>
+</tr>
+<tr>
+  <td class="cmd">if</td>
+  <td class="desc">Bedingte Ausf&uuml;hrung in .bat Scripts</td>
+  <td class="example">if exist datei.txt echo "Gefunden!"<br>if %ERRORLEVEL% == 0 echo OK<br>if not defined VAR set VAR=default</td>
+</tr>
+<tr>
+  <td class="cmd">timeout</td>
+  <td class="desc">Warten in Scripts. <b>/nobreak</b>=kein Abbrechen per Taste</td>
+  <td class="example">timeout /t 10<br>timeout /t 5 /nobreak</td>
+</tr>
+<tr>
+  <td class="cmd">start</td>
+  <td class="desc">Programm oder URL starten. <b>/min</b>=minimiert, <b>/wait</b>=auf Ende warten</td>
+  <td class="example">start notepad.exe<br>start /wait setup.exe<br>start https://www.google.de<br>start "" /min cmd /c ping google.com</td>
+</tr>
+<tr>
+  <td class="cmd">runas</td>
+  <td class="desc">Programm als anderer Benutzer (z.B. Admin) starten</td>
+  <td class="example">runas /user:Administrator cmd<br>runas /user:DOMAIN\admin "mmc.exe"</td>
+</tr>
+<tr>
+  <td class="cmd">color</td>
+  <td class="desc">CMD-Farben &auml;ndern. Erste Ziffer=Hintergrund, zweite=Text (Hex: 0-F)</td>
+  <td class="example">color 0a &nbsp;<i>(schwarzHG, gr&uuml;nText)</i><br>color 4e &nbsp;<i>(rotHG, gelbText)</i><br>color &nbsp;<i>(Reset)</i></td>
+</tr>
+<tr>
+  <td class="cmd">title</td>
+  <td class="desc">Fenstertitel der CMD &auml;ndern</td>
+  <td class="example">title Mein Super Script v1.0</td>
+</tr>
+<tr>
+  <td class="cmd">help</td>
+  <td class="desc">Hilfe zu Befehlen anzeigen. Oder <b>befehl /?</b> f&uuml;r Kurzinfo</td>
+  <td class="example">help<br>help dir<br>xcopy /?</td>
+</tr>
+</table>
+
+<div class="separator">--- // --- // --- // ---</div>
+
+<!-- ===== SECTION 6: SONSTIGES ===== -->
+<h2><span class="section-num">[6]</span> N&uuml;tzliche Einzeiler &amp; Geheimtipps</h2>
+
+<pre>
+REM === ALLE OFFENEN PORTS ANZEIGEN ===
+netstat -ano | find "LISTEN"
+
+REM === ALLE NETZWERKKARTEN-DETAILS ===
+netsh interface show interface
+
+REM === WLAN PASSWORT ANZEIGEN ===
+netsh wlan show profile name="WLAN-NAME" key=clear
+
+REM === DNS-CACHE ANZEIGEN ===
+ipconfig /displaydns
+
+REM === SCHNELL GROSSE DATEIEN FINDEN ===
+forfiles /p C:\ /s /m *.* /c "cmd /c if @fsize GTR 100000000 echo @path @fsize"
+
+REM === ALLE .EXE IN SYSTEM32 AUFLISTEN ===
+dir C:\Windows\System32\*.exe /b | sort &gt; exeliste.txt
+
+REM === PC-UPTIME ANZEIGEN ===
+net statistics workstation | find "since"
+
+REM === ALLE AUTOSTART-PROGRAMME (REGISTRY) ===
+reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+
+REM === LOKALEN ADMIN ERSTELLEN ===
+net user HackMe P@ssw0rd123 /add &amp;&amp; net localgroup Administrators HackMe /add
+
+REM === CMD OUTPUT IN CLIPBOARD KOPIEREN ===
+systeminfo | clip
+
+REM === IP ALLER GERAETE IM NETZ SCANNEN (ARP) ===
+arp -a
+
+REM === DATEI SHREDDEN (MEHRFACH &Uuml;BERSCHREIBEN) ===
+cipher /w:C:\SecretFolder
+</pre>
+
+<!-- ===== CHEAT SHEET BOX ===== -->
+<h2><span class="section-num">[7]</span> Quick-Reference Cheat Sheet</h2>
+
+<table cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="top" width="33%">
+  <table cellspacing="0" cellpadding="0" width="100%">
+  <tr class="trhead"><td colspan="2">Wichtige Tastenkombinationen</td></tr>
+  <tr><td class="cmd">TAB</td><td class="desc">Autovervollst&auml;ndigung</td></tr>
+  <tr><td class="cmd">F7</td><td class="desc">Befehlshistorie anzeigen</td></tr>
+  <tr><td class="cmd">CTRL+C</td><td class="desc">Befehl abbrechen</td></tr>
+  <tr><td class="cmd">CTRL+A</td><td class="desc">Alles markieren</td></tr>
+  <tr><td class="cmd">&uarr; &darr;</td><td class="desc">Vorherige Befehle</td></tr>
+  <tr><td class="cmd">CTRL+Z</td><td class="desc">EOF eingeben</td></tr>
+  <tr><td class="cmd">ALT+F4</td><td class="desc">CMD schlie&szlig;en</td></tr>
+  </table>
+</td>
+<td valign="top" width="34%">
+  <table cellspacing="0" cellpadding="0" width="100%">
+  <tr class="trhead"><td colspan="2">Wichtige Variablen</td></tr>
+  <tr><td class="cmd">%USERPROFILE%</td><td class="desc">C:\Users\Name</td></tr>
+  <tr><td class="cmd">%TEMP%</td><td class="desc">Temp-Ordner</td></tr>
+  <tr><td class="cmd">%APPDATA%</td><td class="desc">AppData\Roaming</td></tr>
+  <tr><td class="cmd">%WINDIR%</td><td class="desc">C:\Windows</td></tr>
+  <tr><td class="cmd">%COMPUTERNAME%</td><td class="desc">PC-Name</td></tr>
+  <tr><td class="cmd">%USERNAME%</td><td class="desc">Benutzername</td></tr>
+  <tr><td class="cmd">%PATH%</td><td class="desc">Suchpfad-Variable</td></tr>
+  </table>
+</td>
+<td valign="top" width="33%">
+  <table cellspacing="0" cellpadding="0" width="100%">
+  <tr class="trhead"><td colspan="2">Wichtige Snap-Ins (run)</td></tr>
+  <tr><td class="cmd">devmgmt.msc</td><td class="desc">Ger&auml;temanager</td></tr>
+  <tr><td class="cmd">diskmgmt.msc</td><td class="desc">Datentr&auml;gerverw.</td></tr>
+  <tr><td class="cmd">eventvwr.msc</td><td class="desc">Ereignisanzeige</td></tr>
+  <tr><td class="cmd">gpedit.msc</td><td class="desc">Gruppenrichtlinien</td></tr>
+  <tr><td class="cmd">services.msc</td><td class="desc">Dienste</td></tr>
+  <tr><td class="cmd">regedit</td><td class="desc">Registry-Editor</td></tr>
+  <tr><td class="cmd">compmgmt.msc</td><td class="desc">Computerverwaltung</td></tr>
+  </table>
+</td>
+</tr>
+</table>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="separator">-=[ CMD COMMANDS MEGALIST v2.1 ]=-</div>
+  <p>Made with &lt;BLINK&gt; and &lt;TABLE&gt; tags &bull; Best viewed in IE 5.5 oder Netscape 6 &bull; 800x600 optimiert</p>
+  <p>
+    <span class="blink">&#9733;</span>
+    &copy; 2001 zaa_ay &bull; Alle Angaben ohne Gew&auml;hr &bull; ICQ: 123456789
+    <span class="blink">&#9733;</span>
+  </p>
+  <p style="color: #333300; font-size:10px;">Du bist der <b style="color:#555500">49.313.</b> Besucher seit 01.01.2001 &mdash; danke f&uuml;r deinen Besuch! Greets an alle aus dem IRC!</p>
+  <br>
+  <span style="color:#004400; font-size:10px;">[Dieses Seite ist gratis gehostet auf Geocities.de]</span>
+</div>
+
+</div><!-- /container -->
+
+<script type="text/javascript">
+// Timer
+var s = 0;
+setInterval(function() {
+  s++;
+  document.getElementById('timer').innerText = s;
+}, 1000);
+
+// Typing effect on load
+var cursor = document.getElementById('cursor');
+// already blinking via CSS
+</script>
+
+</body>
+</html>
